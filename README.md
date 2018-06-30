@@ -15,9 +15,11 @@ Some codes of "orgin/litecore.thrift" was changed to protect the system of LINE 
 ## Libs:
     libs_of_thrift >= 0.10.0
 
-## Compile Litecore:
+## Compile Litecore(If you need):
     thrift >= 0.9.3
 
 # Usage:
-    clone the Repo and Select the Program Language you want.
+    clone the Repo and Select the lib of Program Language you want.
     And then start to Create your Applications. ;)
+
+    or Compile the "litecore.thrift" for yourself...

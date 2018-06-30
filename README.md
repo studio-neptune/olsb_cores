@@ -8,10 +8,15 @@ It was used to Connect LINE Server.
 This software using GNU General Public License v3
 
 # Warning:
-Some codes of "orginal/litecore.thrift" was changed to protect the system of LINE Corp.
+Some codes of "orgin/litecore.thrift" was changed to protect the system of LINE Corp.
 
-# Requires(Except "orginal/litecore.thrift"):
-    libs_of_thrift >= 0.0
+# Requires:
+
+Libs:
+    libs_of_thrift >= 0.10.0
+
+Compile Litecore:
+    thrift >= 0.9.3
 
 # Usage:
     clone the Repo and Select the Program Language you want.

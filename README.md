@@ -13,7 +13,7 @@ Some codes of "orgin/litecore.thrift" was changed to protect the system of LINE 
 ## Requires
 
 ### Libs:
-    libs_of_thrift >= 0.10.0
+    libs_of_thrift >= 0.11.0
 
 ### Compile Litecore(If you need):
     thrift >= 0.9.3

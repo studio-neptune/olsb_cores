@@ -419,7 +419,7 @@ struct LoginSession {
 }
 
 struct Message {
-    1: string _from;
+    1: string from;
     2: string to;
     3: MIDType toType;
     4: string id;

@@ -4,13 +4,13 @@ The "litecore" of SLA(SuperLineApi) by OLSB project.
 
 It was used to Connect LINE Server.
 
-## License:
+## License
 This software using GNU General Public License v3
 
-## Warning:
+## Warning
 Some codes of "orgin/litecore.thrift" was changed to protect the system of LINE Corp.
 
-## Requires:
+## Requires
 
 ### Libs:
     libs_of_thrift >= 0.10.0
@@ -18,7 +18,7 @@ Some codes of "orgin/litecore.thrift" was changed to protect the system of LINE 
 ### Compile Litecore(If you need):
     thrift >= 0.9.3
 
-## Usage:
+## Usage
 Clone the Repo and Select the lib of Program Language you want.
 And then start to Create your Applications. ;)
 

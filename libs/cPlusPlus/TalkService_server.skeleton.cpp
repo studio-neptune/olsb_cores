@@ -23,6 +23,86 @@ class TalkServiceHandler : virtual public TalkServiceIf {
     printf("acceptGroupInvitation\n");
   }
 
+  void acceptProximityMatches(const std::string& sessionId, const std::set<std::string> & ids) {
+    // Your implementation goes here
+    printf("acceptProximityMatches\n");
+  }
+
+  void acquireCallRoute(std::vector<std::string> & _return, const std::string& to) {
+    // Your implementation goes here
+    printf("acquireCallRoute\n");
+  }
+
+  void acquireCallTicket(std::string& _return, const std::string& to) {
+    // Your implementation goes here
+    printf("acquireCallTicket\n");
+  }
+
+  void acquireEncryptedAccessToken(std::string& _return, const FeatureType::type featureType) {
+    // Your implementation goes here
+    printf("acquireEncryptedAccessToken\n");
+  }
+
+  void addSnsId(std::string& _return, const SnsIdType::type snsIdType, const std::string& snsAccessToken) {
+    // Your implementation goes here
+    printf("addSnsId\n");
+  }
+
+  void blockContact(const int32_t reqSeq, const std::string& id) {
+    // Your implementation goes here
+    printf("blockContact\n");
+  }
+
+  void blockRecommendation(const int32_t reqSeq, const std::string& id) {
+    // Your implementation goes here
+    printf("blockRecommendation\n");
+  }
+
+  void cancelGroupInvitation(const int32_t reqSeq, const std::string& groupId, const std::vector<std::string> & contactIds) {
+    // Your implementation goes here
+    printf("cancelGroupInvitation\n");
+  }
+
+  void changeVerificationMethod(VerificationSessionData& _return, const std::string& sessionId, const VerificationMethod::type method) {
+    // Your implementation goes here
+    printf("changeVerificationMethod\n");
+  }
+
+  void clearIdentityCredential() {
+    // Your implementation goes here
+    printf("clearIdentityCredential\n");
+  }
+
+  void clearMessageBox(const std::string& channelId, const std::string& messageBoxId) {
+    // Your implementation goes here
+    printf("clearMessageBox\n");
+  }
+
+  void closeProximityMatch(const std::string& sessionId) {
+    // Your implementation goes here
+    printf("closeProximityMatch\n");
+  }
+
+  void commitSendMessage(std::map<std::string, std::string> & _return, const int32_t seq, const std::string& messageId, const std::vector<std::string> & receiverMids) {
+    // Your implementation goes here
+    printf("commitSendMessage\n");
+  }
+
+  void commitSendMessages(std::map<std::string, std::string> & _return, const int32_t seq, const std::vector<std::string> & messageIds, const std::vector<std::string> & receiverMids) {
+    // Your implementation goes here
+    printf("commitSendMessages\n");
+  }
+
+  void commitUpdateProfile(std::map<std::string, std::string> & _return, const int32_t seq, const std::vector<ProfileAttribute::type> & attrs, const std::vector<std::string> & receiverMids) {
+    // Your implementation goes here
+    printf("commitUpdateProfile\n");
+  }
+
+  void confirmEmail(const std::string& verifier, const std::string& pinCode) {
+    // Your implementation goes here
+    printf("confirmEmail\n");
+  }
+
   void createGroup(Group& _return, const int32_t seq, const std::string& name, const std::vector<std::string> & contactIds) {
     // Your implementation goes here
     printf("createGroup\n");
@@ -43,14 +123,24 @@ class TalkServiceHandler : virtual public TalkServiceIf {
     printf("createSession\n");
   }
 
+  void fetchAnnouncements(std::vector<Announcement> & _return, const int32_t lastFetchedIndex) {
+    // Your implementation goes here
+    printf("fetchAnnouncements\n");
+  }
+
+  void fetchMessages(std::vector<Message> & _return, const int64_t localTs, const int32_t count) {
+    // Your implementation goes here
+    printf("fetchMessages\n");
+  }
+
   void fetchOperations(std::vector<Operation> & _return, const int64_t localRev, const int32_t count) {
     // Your implementation goes here
     printf("fetchOperations\n");
   }
 
-  void getProfile(Profile& _return) {
+  void fetchOps(std::vector<Operation> & _return, const int64_t localRev, const int32_t count, const int64_t globalRev, const int64_t individualRev) {
     // Your implementation goes here
-    printf("getProfile\n");
+    printf("fetchOps\n");
   }
 
   void findAndAddContactsByEmail(std::map<std::string, Contact> & _return, const int32_t reqSeq, const std::set<std::string> & emails) {
@@ -93,14 +183,39 @@ class TalkServiceHandler : virtual public TalkServiceIf {
     printf("findContactsByPhone\n");
   }
 
+  void findSnsIdUserStatus(SnsIdUserStatus& _return, const SnsIdType::type snsIdType, const std::string& snsAccessToken, const std::string& udidHash) {
+    // Your implementation goes here
+    printf("findSnsIdUserStatus\n");
+  }
+
+  void finishUpdateVerification(const std::string& sessionId) {
+    // Your implementation goes here
+    printf("finishUpdateVerification\n");
+  }
+
   void generateUserTicket(Ticket& _return, const int64_t expirationTime, const int32_t maxUseCount) {
     // Your implementation goes here
     printf("generateUserTicket\n");
   }
 
+  void getAcceptedProximityMatches(std::set<std::string> & _return, const std::string& sessionId) {
+    // Your implementation goes here
+    printf("getAcceptedProximityMatches\n");
+  }
+
+  void getActiveBuddySubscriberIds(std::vector<std::string> & _return) {
+    // Your implementation goes here
+    printf("getActiveBuddySubscriberIds\n");
+  }
+
   void getAllContactIds(std::vector<std::string> & _return) {
     // Your implementation goes here
     printf("getAllContactIds\n");
+  }
+
+  void getAuthQrcode(AuthQrcode& _return, const bool keepLoggedIn, const std::string& systemName) {
+    // Your implementation goes here
+    printf("getAuthQrcode\n");
   }
 
   void getBlockedContactIds(std::vector<std::string> & _return) {
@@ -118,6 +233,31 @@ class TalkServiceHandler : virtual public TalkServiceIf {
     printf("getBlockedRecommendationIds\n");
   }
 
+  void getBuddyBlockerIds(std::vector<std::string> & _return) {
+    // Your implementation goes here
+    printf("getBuddyBlockerIds\n");
+  }
+
+  void getBuddyLocation(Geolocation& _return, const std::string& mid, const int32_t index) {
+    // Your implementation goes here
+    printf("getBuddyLocation\n");
+  }
+
+  void getCompactContactsModifiedSince(std::vector<CompactContact> & _return, const int64_t timestamp) {
+    // Your implementation goes here
+    printf("getCompactContactsModifiedSince\n");
+  }
+
+  void getCompactGroup(Group& _return, const std::string& groupId) {
+    // Your implementation goes here
+    printf("getCompactGroup\n");
+  }
+
+  void getCompactRoom(Room& _return, const std::string& roomId) {
+    // Your implementation goes here
+    printf("getCompactRoom\n");
+  }
+
   void getContact(Contact& _return, const std::string& id) {
     // Your implementation goes here
     printf("getContact\n");
@@ -126,6 +266,16 @@ class TalkServiceHandler : virtual public TalkServiceIf {
   void getContacts(std::vector<Contact> & _return, const std::vector<std::string> & ids) {
     // Your implementation goes here
     printf("getContacts\n");
+  }
+
+  void getCountryWithRequestIp(std::string& _return) {
+    // Your implementation goes here
+    printf("getCountryWithRequestIp\n");
+  }
+
+  void getFavoriteMids(std::vector<std::string> & _return) {
+    // Your implementation goes here
+    printf("getFavoriteMids\n");
   }
 
   void getGroup(Group& _return, const std::string& groupId) {
@@ -148,19 +298,104 @@ class TalkServiceHandler : virtual public TalkServiceIf {
     printf("getGroups\n");
   }
 
-  void getFavoriteMids(std::vector<std::string> & _return) {
-    // Your implementation goes here
-    printf("getFavoriteMids\n");
-  }
-
   void getHiddenContactMids(std::vector<std::string> & _return) {
     // Your implementation goes here
     printf("getHiddenContactMids\n");
   }
 
+  void getIdentityIdentifier(std::string& _return) {
+    // Your implementation goes here
+    printf("getIdentityIdentifier\n");
+  }
+
+  int32_t getLastAnnouncementIndex() {
+    // Your implementation goes here
+    printf("getLastAnnouncementIndex\n");
+  }
+
   int64_t getLastOpRevision() {
     // Your implementation goes here
     printf("getLastOpRevision\n");
+  }
+
+  void getMessageBox(TMessageBox& _return, const std::string& channelId, const std::string& messageBoxId, const int32_t lastMessagesCount) {
+    // Your implementation goes here
+    printf("getMessageBox\n");
+  }
+
+  void getMessageBoxCompactWrapUp(TMessageBoxWrapUp& _return, const std::string& mid) {
+    // Your implementation goes here
+    printf("getMessageBoxCompactWrapUp\n");
+  }
+
+  void getMessageBoxCompactWrapUpList(TMessageBoxWrapUpResponse& _return, const int32_t start, const int32_t messageBoxCount) {
+    // Your implementation goes here
+    printf("getMessageBoxCompactWrapUpList\n");
+  }
+
+  void getMessageBoxList(std::vector<TMessageBox> & _return, const std::string& channelId, const int32_t lastMessagesCount) {
+    // Your implementation goes here
+    printf("getMessageBoxList\n");
+  }
+
+  void getMessageBoxListByStatus(std::vector<TMessageBox> & _return, const std::string& channelId, const int32_t lastMessagesCount, const int32_t status) {
+    // Your implementation goes here
+    printf("getMessageBoxListByStatus\n");
+  }
+
+  void getMessageBoxWrapUp(TMessageBoxWrapUp& _return, const std::string& mid) {
+    // Your implementation goes here
+    printf("getMessageBoxWrapUp\n");
+  }
+
+  void getMessageBoxWrapUpList(TMessageBoxWrapUpResponse& _return, const int32_t start, const int32_t messageBoxCount) {
+    // Your implementation goes here
+    printf("getMessageBoxWrapUpList\n");
+  }
+
+  void getMessagesBySequenceNumber(std::vector<Message> & _return, const std::string& channelId, const std::string& messageBoxId, const int64_t startSeq, const int64_t endSeq) {
+    // Your implementation goes here
+    printf("getMessagesBySequenceNumber\n");
+  }
+
+  void getNextMessages(std::vector<Message> & _return, const std::string& messageBoxId, const int64_t startSeq, const int32_t messagesCount) {
+    // Your implementation goes here
+    printf("getNextMessages\n");
+  }
+
+  void getNotificationPolicy(std::vector<NotificationType::type> & _return, const CarrierCode::type carrier) {
+    // Your implementation goes here
+    printf("getNotificationPolicy\n");
+  }
+
+  void getPreviousMessages(std::vector<Message> & _return, const std::string& messageBoxId, const int64_t endSeq, const int32_t messagesCount) {
+    // Your implementation goes here
+    printf("getPreviousMessages\n");
+  }
+
+  void getProfile(Profile& _return) {
+    // Your implementation goes here
+    printf("getProfile\n");
+  }
+
+  void getProximityMatchCandidateList(ProximityMatchCandidateResult& _return, const std::string& sessionId) {
+    // Your implementation goes here
+    printf("getProximityMatchCandidateList\n");
+  }
+
+  void getProximityMatchCandidates(std::set<Contact> & _return, const std::string& sessionId) {
+    // Your implementation goes here
+    printf("getProximityMatchCandidates\n");
+  }
+
+  void getRecentMessages(std::vector<Message> & _return, const std::string& messageBoxId, const int32_t messagesCount) {
+    // Your implementation goes here
+    printf("getRecentMessages\n");
+  }
+
+  void getRecommendationIds(std::vector<std::string> & _return) {
+    // Your implementation goes here
+    printf("getRecommendationIds\n");
   }
 
   void getRoom(Room& _return, const std::string& roomId) {
@@ -183,14 +418,104 @@ class TalkServiceHandler : virtual public TalkServiceIf {
     printf("getSessions\n");
   }
 
+  void getSettings(Settings& _return) {
+    // Your implementation goes here
+    printf("getSettings\n");
+  }
+
+  void getSettingsAttributes(Settings& _return, const int32_t attrBitset) {
+    // Your implementation goes here
+    printf("getSettingsAttributes\n");
+  }
+
+  void getSystemConfiguration(SystemConfiguration& _return) {
+    // Your implementation goes here
+    printf("getSystemConfiguration\n");
+  }
+
+  void getUserTicket(Ticket& _return) {
+    // Your implementation goes here
+    printf("getUserTicket\n");
+  }
+
+  void getWapInvitation(WapInvitation& _return, const std::string& invitationHash) {
+    // Your implementation goes here
+    printf("getWapInvitation\n");
+  }
+
+  void invalidateUserTicket() {
+    // Your implementation goes here
+    printf("invalidateUserTicket\n");
+  }
+
+  void inviteFriendsBySms(const std::vector<std::string> & phoneNumberList) {
+    // Your implementation goes here
+    printf("inviteFriendsBySms\n");
+  }
+
+  void inviteIntoGroup(const int32_t reqSeq, const std::string& groupId, const std::vector<std::string> & contactIds) {
+    // Your implementation goes here
+    printf("inviteIntoGroup\n");
+  }
+
+  void inviteIntoRoom(const int32_t reqSeq, const std::string& roomId, const std::vector<std::string> & contactIds) {
+    // Your implementation goes here
+    printf("inviteIntoRoom\n");
+  }
+
+  void inviteViaEmail(const int32_t reqSeq, const std::string& email, const std::string& name) {
+    // Your implementation goes here
+    printf("inviteViaEmail\n");
+  }
+
+  bool isIdentityIdentifierAvailable(const IdentityProvider::type provider, const std::string& identifier) {
+    // Your implementation goes here
+    printf("isIdentityIdentifierAvailable\n");
+  }
+
+  bool isUseridAvailable(const std::string& userid) {
+    // Your implementation goes here
+    printf("isUseridAvailable\n");
+  }
+
+  void kickoutFromGroup(const int32_t reqSeq, const std::string& groupId, const std::vector<std::string> & contactIds) {
+    // Your implementation goes here
+    printf("kickoutFromGroup\n");
+  }
+
   void leaveGroup(const int32_t reqSeq, const std::string& groupId) {
     // Your implementation goes here
     printf("leaveGroup\n");
   }
 
-  void loginZ(LoginResult& _return, const loginRequest& LoginRequest) {
+  void leaveRoom(const int32_t reqSeq, const std::string& roomId) {
     // Your implementation goes here
-    printf("loginZ\n");
+    printf("leaveRoom\n");
+  }
+
+  void loginWithIdentityCredential(std::string& _return, const IdentityProvider::type identityProvider, const std::string& identifier, const std::string& password, const bool keepLoggedIn, const std::string& accessLocation, const std::string& systemName, const std::string& certificate) {
+    // Your implementation goes here
+    printf("loginWithIdentityCredential\n");
+  }
+
+  void loginWithIdentityCredentialForCertificate(LoginResult& _return, const IdentityProvider::type identityProvider, const std::string& identifier, const std::string& password, const bool keepLoggedIn, const std::string& accessLocation, const std::string& systemName, const std::string& certificate) {
+    // Your implementation goes here
+    printf("loginWithIdentityCredentialForCertificate\n");
+  }
+
+  void loginWithVerifier(std::string& _return, const std::string& verifier) {
+    // Your implementation goes here
+    printf("loginWithVerifier\n");
+  }
+
+  void loginWithVerifierForCerificate(LoginResult& _return, const std::string& verifier) {
+    // Your implementation goes here
+    printf("loginWithVerifierForCerificate\n");
+  }
+
+  void loginWithVerifierForCertificate(LoginResult& _return, const std::string& verifier) {
+    // Your implementation goes here
+    printf("loginWithVerifierForCertificate\n");
   }
 
   void logout() {
@@ -203,20 +528,435 @@ class TalkServiceHandler : virtual public TalkServiceIf {
     printf("logoutSession\n");
   }
 
+  void noop() {
+    // Your implementation goes here
+    printf("noop\n");
+  }
+
+  void notifiedRedirect(const std::map<std::string, std::string> & paramMap) {
+    // Your implementation goes here
+    printf("notifiedRedirect\n");
+  }
+
+  void notifyBuddyOnAir(std::map<std::string, std::string> & _return, const int32_t seq, const std::vector<std::string> & receiverMids) {
+    // Your implementation goes here
+    printf("notifyBuddyOnAir\n");
+  }
+
+  void notifyIndividualEvent(const NotificationStatus::type notificationStatus, const std::vector<std::string> & receiverMids) {
+    // Your implementation goes here
+    printf("notifyIndividualEvent\n");
+  }
+
+  void notifyInstalled(const std::string& udidHash, const std::string& applicationTypeWithExtensions) {
+    // Your implementation goes here
+    printf("notifyInstalled\n");
+  }
+
+  void notifyRegistrationComplete(const std::string& udidHash, const std::string& applicationTypeWithExtensions) {
+    // Your implementation goes here
+    printf("notifyRegistrationComplete\n");
+  }
+
+  void notifySleep(const int64_t lastRev, const int32_t badge) {
+    // Your implementation goes here
+    printf("notifySleep\n");
+  }
+
+  void notifyUpdated(const int64_t lastRev, const DeviceInfo& deviceInfo) {
+    // Your implementation goes here
+    printf("notifyUpdated\n");
+  }
+
+  void openProximityMatch(std::string& _return, const Location& location) {
+    // Your implementation goes here
+    printf("openProximityMatch\n");
+  }
+
+  void registerBuddyUser(std::string& _return, const std::string& buddyId, const std::string& registrarPassword) {
+    // Your implementation goes here
+    printf("registerBuddyUser\n");
+  }
+
+  void registerBuddyUserid(const int32_t seq, const std::string& userid) {
+    // Your implementation goes here
+    printf("registerBuddyUserid\n");
+  }
+
+  void registerDevice(std::string& _return, const std::string& sessionId) {
+    // Your implementation goes here
+    printf("registerDevice\n");
+  }
+
+  void registerDeviceWithIdentityCredential(std::string& _return, const std::string& sessionId, const IdentityProvider::type provider, const std::string& identifier, const std::string& verifier) {
+    // Your implementation goes here
+    printf("registerDeviceWithIdentityCredential\n");
+  }
+
+  void registerDeviceWithoutPhoneNumber(std::string& _return, const std::string& region, const std::string& udidHash, const DeviceInfo& deviceInfo) {
+    // Your implementation goes here
+    printf("registerDeviceWithoutPhoneNumber\n");
+  }
+
+  void registerDeviceWithoutPhoneNumberWithIdentityCredential(std::string& _return, const std::string& region, const std::string& udidHash, const DeviceInfo& deviceInfo, const IdentityProvider::type provider, const std::string& identifier, const std::string& verifier, const std::string& mid) {
+    // Your implementation goes here
+    printf("registerDeviceWithoutPhoneNumberWithIdentityCredential\n");
+  }
+
+  bool registerUserid(const int32_t reqSeq, const std::string& userid) {
+    // Your implementation goes here
+    printf("registerUserid\n");
+  }
+
+  void registerWapDevice(std::string& _return, const std::string& invitationHash, const std::string& guidHash, const std::string& email, const DeviceInfo& deviceInfo) {
+    // Your implementation goes here
+    printf("registerWapDevice\n");
+  }
+
+  void registerWithExistingSnsIdAndIdentityCredential(std::string& _return, const IdentityCredential& identityCredential, const std::string& region, const std::string& udidHash, const DeviceInfo& deviceInfo) {
+    // Your implementation goes here
+    printf("registerWithExistingSnsIdAndIdentityCredential\n");
+  }
+
+  void registerWithSnsId(RegisterWithSnsIdResult& _return, const SnsIdType::type snsIdType, const std::string& snsAccessToken, const std::string& region, const std::string& udidHash, const DeviceInfo& deviceInfo, const std::string& mid) {
+    // Your implementation goes here
+    printf("registerWithSnsId\n");
+  }
+
+  void registerWithSnsIdAndIdentityCredential(std::string& _return, const SnsIdType::type snsIdType, const std::string& snsAccessToken, const IdentityCredential& identityCredential, const std::string& region, const std::string& udidHash, const DeviceInfo& deviceInfo) {
+    // Your implementation goes here
+    printf("registerWithSnsIdAndIdentityCredential\n");
+  }
+
+  void reissueDeviceCredential(std::string& _return) {
+    // Your implementation goes here
+    printf("reissueDeviceCredential\n");
+  }
+
+  void reissueUserTicket(std::string& _return, const int64_t expirationTime, const int32_t maxUseCount) {
+    // Your implementation goes here
+    printf("reissueUserTicket\n");
+  }
+
+  void rejectGroupInvitation(const int32_t reqSeq, const std::string& groupId) {
+    // Your implementation goes here
+    printf("rejectGroupInvitation\n");
+  }
+
+  void releaseSession() {
+    // Your implementation goes here
+    printf("releaseSession\n");
+  }
+
+  void removeAllMessages(const int32_t seq, const std::string& lastMessageId) {
+    // Your implementation goes here
+    printf("removeAllMessages\n");
+  }
+
+  void removeBuddyLocation(const std::string& mid, const int32_t index) {
+    // Your implementation goes here
+    printf("removeBuddyLocation\n");
+  }
+
+  bool removeMessage(const std::string& messageId) {
+    // Your implementation goes here
+    printf("removeMessage\n");
+  }
+
+  bool removeMessageFromMyHome(const std::string& messageId) {
+    // Your implementation goes here
+    printf("removeMessageFromMyHome\n");
+  }
+
+  void removeSnsId(std::string& _return, const SnsIdType::type snsIdType) {
+    // Your implementation goes here
+    printf("removeSnsId\n");
+  }
+
+  void report(const int64_t syncOpRevision, const SyncCategory::type category, const std::string& report) {
+    // Your implementation goes here
+    printf("report\n");
+  }
+
+  void reportContacts(std::vector<ContactReportResult> & _return, const int64_t syncOpRevision, const SyncCategory::type category, const std::vector<ContactReport> & contactReports, const SyncActionType::type actionType) {
+    // Your implementation goes here
+    printf("reportContacts\n");
+  }
+
+  void reportGroups(const int64_t syncOpRevision, const std::vector<Group> & groups) {
+    // Your implementation goes here
+    printf("reportGroups\n");
+  }
+
+  void reportProfile(const int64_t syncOpRevision, const Profile& profile) {
+    // Your implementation goes here
+    printf("reportProfile\n");
+  }
+
+  void reportRooms(const int64_t syncOpRevision, const std::vector<Room> & rooms) {
+    // Your implementation goes here
+    printf("reportRooms\n");
+  }
+
+  void reportSettings(const int64_t syncOpRevision, const Settings& settings) {
+    // Your implementation goes here
+    printf("reportSettings\n");
+  }
+
+  void reportSpammer(const std::string& spammerMid, const std::vector<SpammerReason::type> & spammerReasons, const std::vector<std::string> & spamMessageIds) {
+    // Your implementation goes here
+    printf("reportSpammer\n");
+  }
+
+  void requestAccountPasswordReset(const IdentityProvider::type provider, const std::string& identifier, const std::string& locale) {
+    // Your implementation goes here
+    printf("requestAccountPasswordReset\n");
+  }
+
+  void requestEmailConfirmation(EmailConfirmationSession& _return, const EmailConfirmation& emailConfirmation) {
+    // Your implementation goes here
+    printf("requestEmailConfirmation\n");
+  }
+
+  void requestIdentityUnbind(const IdentityProvider::type provider, const std::string& identifier) {
+    // Your implementation goes here
+    printf("requestIdentityUnbind\n");
+  }
+
+  void resendEmailConfirmation(EmailConfirmationSession& _return, const std::string& verifier) {
+    // Your implementation goes here
+    printf("resendEmailConfirmation\n");
+  }
+
+  void resendPinCode(const std::string& sessionId) {
+    // Your implementation goes here
+    printf("resendPinCode\n");
+  }
+
+  void resendPinCodeBySMS(const std::string& sessionId) {
+    // Your implementation goes here
+    printf("resendPinCodeBySMS\n");
+  }
+
+  void sendChatChecked(const int32_t seq, const std::string& consumer, const std::string& lastMessageId) {
+    // Your implementation goes here
+    printf("sendChatChecked\n");
+  }
+
+  void sendChatRemoved(const int32_t seq, const std::string& consumer, const std::string& lastMessageId) {
+    // Your implementation goes here
+    printf("sendChatRemoved\n");
+  }
+
+  void sendContentPreviewUpdated(std::map<std::string, std::string> & _return, const int32_t esq, const std::string& messageId, const std::vector<std::string> & receiverMids) {
+    // Your implementation goes here
+    printf("sendContentPreviewUpdated\n");
+  }
+
+  void sendContentReceipt(const int32_t seq, const std::string& consumer, const std::string& messageId) {
+    // Your implementation goes here
+    printf("sendContentReceipt\n");
+  }
+
+  void sendDummyPush() {
+    // Your implementation goes here
+    printf("sendDummyPush\n");
+  }
+
+  void sendEvent(Message& _return, const int32_t seq, const Message& message) {
+    // Your implementation goes here
+    printf("sendEvent\n");
+  }
+
   void sendMessage(Message& _return, const int32_t seq, const Message& message) {
     // Your implementation goes here
     printf("sendMessage\n");
+  }
+
+  void sendMessageIgnored(const int32_t seq, const std::string& consumer, const std::vector<std::string> & messageIds) {
+    // Your implementation goes here
+    printf("sendMessageIgnored\n");
+  }
+
+  void sendMessageReceipt(const int32_t seq, const std::string& consumer, const std::vector<std::string> & messageIds) {
+    // Your implementation goes here
+    printf("sendMessageReceipt\n");
+  }
+
+  void sendMessageToMyHome(Message& _return, const int32_t seq, const Message& message) {
+    // Your implementation goes here
+    printf("sendMessageToMyHome\n");
+  }
+
+  void setBuddyLocation(const std::string& mid, const int32_t index, const Geolocation& location) {
+    // Your implementation goes here
+    printf("setBuddyLocation\n");
+  }
+
+  void setIdentityCredential(const IdentityProvider::type provider, const std::string& identifier, const std::string& verifier) {
+    // Your implementation goes here
+    printf("setIdentityCredential\n");
+  }
+
+  void setNotificationsEnabled(const int32_t reqSeq, const MIDType::type type, const std::string& target, const bool enablement) {
+    // Your implementation goes here
+    printf("setNotificationsEnabled\n");
+  }
+
+  void startUpdateVerification(VerificationSessionData& _return, const std::string& region, const CarrierCode::type carrier, const std::string& phone, const std::string& udidHash, const DeviceInfo& deviceInfo, const std::string& networkCode, const std::string& locale) {
+    // Your implementation goes here
+    printf("startUpdateVerification\n");
+  }
+
+  void startVerification(VerificationSessionData& _return, const std::string& region, const CarrierCode::type carrier, const std::string& phone, const std::string& udidHash, const DeviceInfo& deviceInfo, const std::string& networkCode, const std::string& mid, const std::string& locale) {
+    // Your implementation goes here
+    printf("startVerification\n");
+  }
+
+  void storeUpdateProfileAttribute(const int32_t seq, const ProfileAttribute::type profileAttribute, const std::string& value) {
+    // Your implementation goes here
+    printf("storeUpdateProfileAttribute\n");
+  }
+
+  void syncContactBySnsIds(std::vector<SnsFriendContactRegistration> & _return, const int32_t reqSeq, const std::vector<SnsFriendModification> & modifications) {
+    // Your implementation goes here
+    printf("syncContactBySnsIds\n");
+  }
+
+  void syncContacts(std::map<std::string, ContactRegistration> & _return, const int32_t reqSeq, const std::vector<ContactModification> & localContacts) {
+    // Your implementation goes here
+    printf("syncContacts\n");
+  }
+
+  void trySendMessage(Message& _return, const int32_t seq, const Message& message) {
+    // Your implementation goes here
+    printf("trySendMessage\n");
+  }
+
+  void unblockContact(const int32_t reqSeq, const std::string& id) {
+    // Your implementation goes here
+    printf("unblockContact\n");
+  }
+
+  void unblockRecommendation(const int32_t reqSeq, const std::string& id) {
+    // Your implementation goes here
+    printf("unblockRecommendation\n");
+  }
+
+  void unregisterUserAndDevice(std::string& _return) {
+    // Your implementation goes here
+    printf("unregisterUserAndDevice\n");
+  }
+
+  void updateApnsDeviceToken(const std::string& apnsDeviceToken) {
+    // Your implementation goes here
+    printf("updateApnsDeviceToken\n");
+  }
+
+  void updateBuddySetting(const std::string& key, const std::string& value) {
+    // Your implementation goes here
+    printf("updateBuddySetting\n");
+  }
+
+  void updateC2DMRegistrationId(const std::string& registrationId) {
+    // Your implementation goes here
+    printf("updateC2DMRegistrationId\n");
+  }
+
+  void updateContactSetting(const int32_t reqSeq, const std::string& mid, const ContactSetting::type flag, const std::string& value) {
+    // Your implementation goes here
+    printf("updateContactSetting\n");
+  }
+
+  void updateCustomModeSettings(const CustomMode::type customMode, const std::map<std::string, std::string> & paramMap) {
+    // Your implementation goes here
+    printf("updateCustomModeSettings\n");
+  }
+
+  void updateDeviceInfo(const std::string& deviceUid, const DeviceInfo& deviceInfo) {
+    // Your implementation goes here
+    printf("updateDeviceInfo\n");
+  }
+
+  void updateGroup(const int32_t reqSeq, const Group& group) {
+    // Your implementation goes here
+    printf("updateGroup\n");
+  }
+
+  void updateNotificationToken(const NotificationType::type type, const std::string& token) {
+    // Your implementation goes here
+    printf("updateNotificationToken\n");
+  }
+
+  void updateNotificationTokenWithBytes(const NotificationType::type type, const std::string& token) {
+    // Your implementation goes here
+    printf("updateNotificationTokenWithBytes\n");
+  }
+
+  void updateProfile(const int32_t reqSeq, const Profile& profile) {
+    // Your implementation goes here
+    printf("updateProfile\n");
+  }
+
+  void updateProfileAttribute(const int32_t reqSeq, const ProfileAttribute::type attr, const std::string& value) {
+    // Your implementation goes here
+    printf("updateProfileAttribute\n");
+  }
+
+  void updateRegion(const std::string& region) {
+    // Your implementation goes here
+    printf("updateRegion\n");
+  }
+
+  void updateSettings(const int32_t reqSeq, const Settings& settings) {
+    // Your implementation goes here
+    printf("updateSettings\n");
+  }
+
+  int32_t updateSettings2(const int32_t reqSeq, const Settings& settings) {
+    // Your implementation goes here
+    printf("updateSettings2\n");
+  }
+
+  void updateSettingsAttribute(const int32_t reqSeq, const SettingsAttribute::type attr, const std::string& value) {
+    // Your implementation goes here
+    printf("updateSettingsAttribute\n");
+  }
+
+  int32_t updateSettingsAttributes(const int32_t reqSeq, const int32_t attrBitset, const Settings& settings) {
+    // Your implementation goes here
+    printf("updateSettingsAttributes\n");
+  }
+
+  void verifyIdentityCredential(const IdentityProvider::type identityProvider, const std::string& identifier, const std::string& password) {
+    // Your implementation goes here
+    printf("verifyIdentityCredential\n");
+  }
+
+  void verifyIdentityCredentialWithResult(UserAuthStatus& _return, const IdentityCredential& identityCredential) {
+    // Your implementation goes here
+    printf("verifyIdentityCredentialWithResult\n");
+  }
+
+  VerificationResult::type verifyPhone(const std::string& sessionId, const std::string& pinCode, const std::string& udidHash) {
+    // Your implementation goes here
+    printf("verifyPhone\n");
+  }
+
+  void verifyQrcode(std::string& _return, const std::string& verifier, const std::string& pinCode) {
+    // Your implementation goes here
+    printf("verifyQrcode\n");
   }
 
 };
 
 int main(int argc, char **argv) {
   int port = 9090;
-  ::apache::thrift::stdcxx::shared_ptr<TalkServiceHandler> handler(new TalkServiceHandler());
-  ::apache::thrift::stdcxx::shared_ptr<TProcessor> processor(new TalkServiceProcessor(handler));
-  ::apache::thrift::stdcxx::shared_ptr<TServerTransport> serverTransport(new TServerSocket(port));
-  ::apache::thrift::stdcxx::shared_ptr<TTransportFactory> transportFactory(new TBufferedTransportFactory());
-  ::apache::thrift::stdcxx::shared_ptr<TProtocolFactory> protocolFactory(new TBinaryProtocolFactory());
+  ::std::shared_ptr<TalkServiceHandler> handler(new TalkServiceHandler());
+  ::std::shared_ptr<TProcessor> processor(new TalkServiceProcessor(handler));
+  ::std::shared_ptr<TServerTransport> serverTransport(new TServerSocket(port));
+  ::std::shared_ptr<TTransportFactory> transportFactory(new TBufferedTransportFactory());
+  ::std::shared_ptr<TProtocolFactory> protocolFactory(new TBinaryProtocolFactory());
 
   TSimpleServer server(processor, serverTransport, transportFactory, protocolFactory);
   server.serve();

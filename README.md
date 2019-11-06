@@ -1,25 +1,31 @@
-OpenLineSelfBot - Cores
-==================
-The "litecore" of SLA(SuperLineApi) by OLSB project.
+# OpenLineSelfBot - Cores
 
-It was used to Connect LINE Server.
+> version 2.0
+
+The core of OLSB project.
+
+It is used to connect services of LINE.
 
 ## License
-This software using GNU General Public License v3
 
-## Warning
-Some codes of "orgin/litecore.thrift" was changed to protect the system of LINE Corp.
+The software licensed under [GNU Lesser General Public License 3.0](LICENSE.md)
 
-## Requires
+## Requirement
 
-### Libs:
+### Library
+
     libs_of_thrift >= 0.11.0
 
-### Compile Litecore(If you need):
-    thrift >= 0.9.3
+### Compile (If you need)
+
+    thrift >= 0.13.0
 
 ## Usage
-Clone the Repo and Select the lib of Program Language you want.
-And then start to Create your Applications. ;)
 
-or Compile the "litecore.thrift" for yourself...
+Clone the repository and get the library of the programming language you want.
+
+> Start to Create your Applications. >o<
+
+or Compile the ["line.thrift"](origin/line.thrift) for yourself...
+
+*(c) 2019 Star Inc.*

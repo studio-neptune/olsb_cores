@@ -982,6 +982,20 @@ struct LastReadMessageIds {
     2: list<LastReadMessageId> lastReadMessageIds;
 }
 
+struct LoginRequest {
+    1: i32 type;
+    2: i32 identityProvider;
+    3: string identifier;
+    4: string password;
+    5: bool keepLoggedIn;
+    6: string accessLocation;
+    7: string systemName;
+    8: string certificate;
+    9: string verifier;
+    10: string secret;
+    11: i32 e2eeVersion;
+}
+
 struct LoginResult {
     1: string authToken;
     2: string certificate;
@@ -2327,6 +2341,9 @@ service TalkService {
     void leaveRoom(
         1: i32 reqSeq,
         2: string roomId) throws(1: TalkException e);
+
+    LoginResult loginZ(
+        2: loginRequest LoginRequest) throws(1: TalkException e);
 
     string loginWithIdentityCredential(
         8: IdentityProvider identityProvider,

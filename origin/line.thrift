@@ -2343,7 +2343,7 @@ service TalkService {
         2: string roomId) throws(1: TalkException e);
 
     LoginResult loginZ(
-        2: loginRequest LoginRequest) throws(1: TalkException e);
+        2: LoginRequest loginRequest) throws(1: TalkException e);
 
     string loginWithIdentityCredential(
         8: IdentityProvider identityProvider,
